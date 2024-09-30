@@ -13,6 +13,7 @@ import NotFound from "./components/NotFound";
 import AdminLogin from './components/AdminLogin';
 import VolunteerRegistration from './components/VolunteerRegistration';
 import EventRegistration from './components/EventRegistration';
+import AdminDashboard from "./components/AdminDashboard";
 
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
           <Route path='/donate' element={<Donate/>} />
           <Route path='*' element={<NotFound/>}/>
           <Route path="/AdminLogin" element={<AdminLogin/>} />
+          <Route path="/AdminDashboard" element={<AdminDashboard />} />
           <Route path="/VolunteerRegistration" element={<VolunteerRegistration />} />
           <Route path="/EventRegistration" element={<EventRegistration />} />
         </Routes>

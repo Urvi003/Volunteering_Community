@@ -807,3 +807,189 @@ footer div ul a span {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+/***************************ADMIN LOGIN COMPONENT*********************************************/
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+/* .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+} */
+
+.form-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn {
+  background-color: #f9a825;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #ffcc00;
+}
+.volunteer-registration{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
+/***************************EVENT REGISTRATION COMPONENT*********************************************/
+.event-registration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
+.container {
+  width: 600px; /* Set a fixed width for the form */
+  padding: 20px;
+  border: 1px solid #ccc; /* Add a border for visibility */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  background-color: #fff; /* White background */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  text-align: center; /* Center the heading */
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+input {
+  margin-bottom: 15px; /* Space between input fields */
+  padding: 10px; /* Padding inside input fields */
+  border: 1px solid #ccc; /* Border for input fields */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.btn {
+  background-color: #28a745; /* Green background */
+  color: white; /* White text */
+  padding: 10px;
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+}
+
+.btn:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+/***************************ADMIN DASHBOARD COMPONENT*********************************************/
+/* Add this CSS to your styles.css file or inline within your component */
+.admin-dashboard .container {
+  max-width: 800px;
+  margin: 0 auto; /* This centers the container horizontally */
+  padding: 20px;
+  text-align: center; /* This centers the text and buttons */
+  padding-bottom: 50px; /* Adds padding at the bottom */
+}
+.admin-dashboard {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.admin-dashboard h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.admin-dashboard ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.admin-dashboard li {
+  margin-bottom: 30px;
+}
+
+.admin-dashboard button {
+  margin: 5px;
+  padding: 8px 16px;
+  background-color: #f04a4a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-dashboard button:hover {
+  background-color: #d73838;
+}
+
+.admin-dashboard form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px auto;
+  width: 50%;
+}
+
+.admin-dashboard input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.admin-dashboard input:focus {
+  border-color: #f04a4a;
+  outline: none;
+}
+
+.admin-dashboard form button {
+  background-color: #4caf50;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+.admin-dashboard form button:hover {
+  background-color: #45a049;
+}
+

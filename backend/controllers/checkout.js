@@ -31,8 +31,8 @@ const createInvoice = async (amount) => {
       amount: amount,
       currency: "USD",
       order_id: crypto.randomBytes(12).toString("hex"),
-      url_return: "https://mern-stack-volunteer.vercel.app/donate",
-      url_success: "https://mern-stack-volunteer.vercel.app",
+      url_return: "https://volunteering-community.vercel.app/donate",
+      url_success: "https://volunteering-community.vercel.app",
       lifetime: 300,
     };
 
