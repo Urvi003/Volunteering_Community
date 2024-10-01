@@ -920,12 +920,12 @@ input {
 
 /***************************ADMIN DASHBOARD COMPONENT*********************************************/
 /* Add this CSS to your styles.css file or inline within your component */
-.admin-dashboard .container {
+/* .admin-dashboard .container {
   max-width: 800px;
-  margin: 0 auto; /* This centers the container horizontally */
+  margin: 0 auto; 
   padding: 20px;
-  text-align: center; /* This centers the text and buttons */
-  padding-bottom: 50px; /* Adds padding at the bottom */
+  text-align: center; 
+  padding-bottom: 50px; 
 }
 .admin-dashboard {
   text-align: center;
@@ -936,6 +936,7 @@ input {
 .admin-dashboard h2 {
   font-size: 24px;
   margin-bottom: 20px;
+  color: #218838;
 }
 
 .admin-dashboard ul {
@@ -950,7 +951,7 @@ input {
 .admin-dashboard button {
   margin: 5px;
   padding: 8px 16px;
-  background-color: #f04a4a;
+  background-color:black;
   color: white;
   border: none;
   border-radius: 4px;
@@ -991,5 +992,117 @@ input {
 
 .admin-dashboard form button:hover {
   background-color: #45a049;
+} */
+
+/***************************ADMIN DASHBOARD COMPONENT*********************************************/
+
+/* General layout styles */ */
+.admin-dashboard .container-full-width {
+  width: 100%;
+  padding: 40px;
+  padding-left: 300px;
+  padding-right: 300px;
+  padding-bottom: 50px;
 }
 
+.admin-dashboard h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #218838;
+  text-align: left;
+  font-weight:bolder;
+  padding-left: 30px;
+}
+
+
+.admin-dashboard ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.admin-dashboard li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+.volunteer-info, .event-info {
+  flex: 1;
+  text-align: left;
+}
+
+/* Aligns the button group to the right */
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.icon-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.icon-btn:hover {
+  color: #218838;
+}
+
+.icon-btn .fa-eye, .icon-btn .fa-pencil-alt, .icon-btn .fa-trash {
+  font-size: 18px;
+}
+
+.admin-dashboard .container-full-width {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem; /* Adds space between each list item */
+}
+
+.volunteer-details, .event-details {
+  display: block;
+  margin-top: 1rem;
+  width: 100%; /* Ensure the details span the full width below the item */
+  background-color: #f9f9f9; /* Optional: Light background for the details */
+  padding: 1rem; /* Adds padding around the details */
+  border: 1px solid #ddd; /* Optional: Border around the details */
+  border-radius: 5px; /* Optional: Rounded corners */
+}
+
+/* Make sure the volunteer info and event info expand to fill available space */
+.volunteer-info, .event-info {
+  display: block;
+  width: 100%; /* Ensure the info spans the full width */
+}
+
+/* Ensure the buttons appear inline and aligned to the right */
+.button-group {
+  display: flex;
+  justify-content: flex-end; /* Aligns buttons to the right */
+  gap: 10px; /* Adds space between the buttons */
+}
+
+.icon-btn {
+  display: inline-block;
+  padding: 0.5rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.BUTTON{
+  background-color: #4caf50;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border-color: #4caf50;
+  margin-bottom: 20px; /* Adjust the value as needed for spacing */
+}
