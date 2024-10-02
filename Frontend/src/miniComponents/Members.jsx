@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const Members = () => {
   const members = [
     {
@@ -40,7 +41,7 @@ const Members = () => {
   ];
   return (
     <>
-      <section className="members">
+      <section className="members" data-aos="fade-up">
         <div className="container">
           <div className="heading_section">
             <h2 className="heading">MEMBERS</h2>
@@ -52,7 +53,7 @@ const Members = () => {
           </div>
           <div className="members_container">
             {members.map((element) => (
-              <div className="card" key={element.id}>
+              <div className="card" key={element.id} data-aos="fade-up">
                 <img src={element.image} alt={element.title} />
                 <h3>{element.title}</h3>
               </div>

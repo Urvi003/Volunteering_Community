@@ -14,6 +14,8 @@ import AdminLogin from './components/AdminLogin';
 import VolunteerRegistration from './components/VolunteerRegistration';
 import EventRegistration from './components/EventRegistration';
 import AdminDashboard from "./components/AdminDashboard";
+import VolunteerLogin from './components/VolunteerLogin';
+import VolunteerDashboard from './components/VolunteerDashboard';
 
 
 const App = () => {
@@ -31,6 +33,8 @@ const App = () => {
           <Route path="/AdminDashboard" element={<AdminDashboard />} />
           <Route path="/VolunteerRegistration" element={<VolunteerRegistration />} />
           <Route path="/EventRegistration" element={<EventRegistration />} />
+          <Route path="/VolunteerLogin" element={<VolunteerLogin/>} />
+          <Route path="/VolunteerDashboard" element={<VolunteerDashboard/>} />
         </Routes>
         <Footer/>
         <ToastContainer position='top-center'/>

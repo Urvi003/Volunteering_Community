@@ -20,11 +20,19 @@ const Navbar = () => {
                 <li><Link to = {"/contact"}>CONTACT</Link></li>
                 {/* <li><Link to = {"/volunteers"}>VOLUNTEERS</Link></li> */}
                 <li className="dropdown">
-                <Link to="#" className="dropbtn">ADMIN</Link>
+                <Link to="#" className="dropbtn">REGISTER</Link>
                 <div className="dropdown-content">
-                <Link to="/AdminLogin">LOGIN</Link>
                 <Link to="/VolunteerRegistration">VOLUNTEER REGISTRATION</Link>
                 <Link to="/EventRegistration">EVENT REGISTRATION</Link>
+          </div>
+        </li>
+        <li className="dropdown">
+                <Link to="#" className="dropbtn">LOGIN</Link>
+                <div className="dropdown-content">
+                <Link to="/AdminLogin">ADMIN</Link>
+                <Link to="/VolunteerLogin">VOLUNTEER</Link>
+                {/* <Link to="/VolunteerRegistration">VOLUNTEER REGISTRATION</Link>
+                <Link to="/EventRegistration">EVENT REGISTRATION</Link> */}
           </div>
         </li>
             </ul>

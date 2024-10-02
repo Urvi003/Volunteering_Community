@@ -25,6 +25,10 @@ app.use("/api/v1/message", messageRouter);
 app.use("/api/v1/volunteer", RegisteredVolunteerRoutes);
 app.use("/api/v1/event", eventRegistrationRoutes);
 app.use("/api/v1", checkoutRouter);
+app.use("/api/v1/volunteer/login",RegisteredVolunteerRoutes);
+app.use("/api/v1/event/:eventId/register",eventRegistrationRoutes);
+app.use("/api/v1/volunteer/:id/events",RegisteredVolunteerRoutes)
+app.use("/api/v1/events",eventRegistrationRoutes);
 
 dbConnection();
 
