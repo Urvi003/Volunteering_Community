@@ -869,6 +869,7 @@ h2 {
   justify-content: center;
   align-items: center;
   height: 100vh; /* Full viewport height */
+  padding-bottom: 30px;
 }
 
 /***************************EVENT REGISTRATION COMPONENT*********************************************/
@@ -917,82 +918,6 @@ input {
 .btn:hover {
   background-color: #218838; /* Darker green on hover */
 }
-
-/***************************ADMIN DASHBOARD COMPONENT*********************************************/
-/* Add this CSS to your styles.css file or inline within your component */
-/* .admin-dashboard .container {
-  max-width: 800px;
-  margin: 0 auto; 
-  padding: 20px;
-  text-align: center; 
-  padding-bottom: 50px; 
-}
-.admin-dashboard {
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-.admin-dashboard h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #218838;
-}
-
-.admin-dashboard ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.admin-dashboard li {
-  margin-bottom: 30px;
-}
-
-.admin-dashboard button {
-  margin: 5px;
-  padding: 8px 16px;
-  background-color:black;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.admin-dashboard button:hover {
-  background-color: #d73838;
-}
-
-.admin-dashboard form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin: 20px auto;
-  width: 50%;
-}
-
-.admin-dashboard input {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  width: 100%;
-}
-
-.admin-dashboard input:focus {
-  border-color: #f04a4a;
-  outline: none;
-}
-
-.admin-dashboard form button {
-  background-color: #4caf50;
-  padding: 10px 20px;
-  border-radius: 4px;
-}
-
-.admin-dashboard form button:hover {
-  background-color: #45a049;
-} */
 
 /***************************ADMIN DASHBOARD COMPONENT*********************************************/
 
@@ -1066,7 +991,8 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1.5rem; /* Adds space between each list item */
+  margin-bottom: 1.5rem; 
+  margin-bottom: 20px;
 }
 
 .volunteer-details, .event-details {
@@ -1083,12 +1009,12 @@ input {
 .volunteer-info, .event-info {
   display: block;
   width: 100%; /* Ensure the info spans the full width */
+  margin-bottom: 20px;
 }
 
-/* Ensure the buttons appear inline and aligned to the right */
 .button-group {
   display: flex;
-  justify-content: flex-end; /* Aligns buttons to the right */
+  justify-content: flex-end; 
   gap: 10px; /* Adds space between the buttons */
 }
 
@@ -1099,6 +1025,16 @@ input {
   background-color: transparent;
   cursor: pointer;
 }
+
+.icon-btn1 {
+  display: inline-block;
+  padding: 0.5rem;
+  padding-right: 50px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 .BUTTON{
   background-color: #4caf50;
   padding: 10px 20px;
@@ -1106,33 +1042,123 @@ input {
   border-color: #4caf50;
   margin-bottom: 20px; /* Adjust the value as needed for spacing */
 }
+/****************************************ACCOUNT PAGE**********************************/
+.account-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
 
-/***************************************************************************************************/
+.account-page h1 {
+  text-align: center;
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
 
+.volunteer-details {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
+.volunteer-details h2 {
+  font-size: 1.8rem;
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.volunteer-details p {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+.volunteer-details p strong {
+  font-weight: bold;
+}
+
+.change-password {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.change-password h2 {
+  font-size: 1.8rem;
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.change-password input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.change-password button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.change-password button:hover {
+  background-color: #218838;
+}
+
+@media (max-width: 768px) {
+  .account-page {
+    padding: 10px;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  .volunteer-details, .change-password {
+    padding: 15px;
   }
 }
 
+.account-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #f0f0f0; /* Light background color */
+  color: #333; /* Icon color */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+  margin-left: auto; /* Align the icon to the right */
+  margin-right: 20px; /* Give it some space from the edge */
+  margin-top: 20px;
+}
 
-.scroll-animation {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+.account-icon:hover {
+  background-color: #e0e0e0; /* Darker background on hover */
+  color: #007bff; /* Change icon color on hover */
 }
 
 
-.scroll-animation-visible {
-  opacity: 1;
-  transform: translateY(0);
-  animation: fadeInUp 0.6s ease-out forwards;
-}
 
  

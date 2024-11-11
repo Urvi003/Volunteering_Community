@@ -33,51 +33,13 @@ const eventRegistrationSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
+  volunteers: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Volunteer" // Refers to the Volunteer model
+  }] // Array of volunteers registered for the event
 });
-
-// const EventSchema = new mongoose.Schema({
-//   organizationName: String,
-//   phone: String,
-//   email: String,
-//   eventDestination: String,
-//   eventName: String,
-//   volunteersNeeded: Number,
-//   volunteers: [{ type: mongoose.Schema.Types.ObjectId, ref: 'RegisteredVolunteers' }]
-// });
-
-const EventSchema = new mongoose.Schema({
-  organizationName: {
-    type: String,
-    required: true,
-  },
-  phone: {
-    type: String,
-    required: true,
-  },
-  email: {
-    type: String,
-    required: true,
-  },
-  eventDestination: {
-    type: String,
-    required: true,
-  },
-  eventName: {
-    type: String,
-    required: true,
-  },
-  volunteersNeeded: {
-    type: Number,
-    required: true,
-  },
-  volunteers: [{ type: mongoose.Schema.Types.ObjectId, ref: 'RegisteredVolunteers' }],
-});
-
-
-// Create the model based on the schema
 export const EventRegistration = mongoose.model(
   "EventRegistration",
   eventRegistrationSchema
 );
 
-export const Event = mongoose.model("Event", EventSchema);

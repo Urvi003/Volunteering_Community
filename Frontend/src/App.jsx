@@ -16,6 +16,7 @@ import EventRegistration from './components/EventRegistration';
 import AdminDashboard from "./components/AdminDashboard";
 import VolunteerLogin from './components/VolunteerLogin';
 import VolunteerDashboard from './components/VolunteerDashboard';
+import AccountPage from './components/AccountPage';
 
 
 const App = () => {
@@ -35,6 +36,7 @@ const App = () => {
           <Route path="/EventRegistration" element={<EventRegistration />} />
           <Route path="/VolunteerLogin" element={<VolunteerLogin/>} />
           <Route path="/VolunteerDashboard" element={<VolunteerDashboard/>} />
+          <Route path="/account" element={<AccountPage/>} />
         </Routes>
         <Footer/>
         <ToastContainer position='top-center'/>

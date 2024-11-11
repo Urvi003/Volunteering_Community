@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
@@ -6,6 +7,7 @@ import { faEye, faPencilAlt, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 const AdminDashboard = () => {
   const [volunteers, setVolunteers] = useState([]);
+  const [totalDonations, setTotalDonations] = useState(0);
   const [events, setEvents] = useState([]);
   const [editVolunteer, setEditVolunteer] = useState(null);
   const [editEvent, setEditEvent] = useState(null);
@@ -30,6 +32,7 @@ const AdminDashboard = () => {
   useEffect(() => {
     fetchVolunteers();
     fetchEvents();
+    fetchTotalDonations();
   }, []);
 
   const fetchVolunteers = async () => {
@@ -47,6 +50,29 @@ const AdminDashboard = () => {
       setEvents(response.data);
     } catch (error) {
       toast.error("Failed to fetch events.");
+    }
+  };
+  //  // Fetch total donations from the backend
+  //  const fetchTotalDonations = async () => {
+  //   try {
+  //     const response = await axios.get("http://localhost:4000/api/v1/donations/total");
+  //     withCredentials: true,
+  //     console.log(response.data); 
+  //     setTotalDonations(response.data.totalAmount);
+  //   } catch (error) {
+  //     toast.error("Failed to fetch total donations.");
+  //   }
+  // };
+
+  const fetchTotalDonations = async () => {
+    try {
+      const response = await axios.get("http://localhost:4000/api/v1/donations/total", {
+        withCredentials: true
+      });
+      console.log(response.data); 
+      setTotalDonations(response.data.totalAmount);
+    } catch (error) {
+      toast.error("Failed to fetch total donations.");
     }
   };
 
@@ -114,9 +140,13 @@ const updateEvent = async (e) => {
       }
     };
 
+
 return (
     <section className="admin-dashboard">
       <div className="container-full-width">
+
+        {/* Total Donations Section */}
+        <h2><strong>Total Donations: ₹{totalDonations}</strong></h2>
         
         {/* Registered Volunteers Section */}
         <h2><strong>Registered Volunteers:</strong></h2>

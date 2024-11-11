@@ -12,7 +12,7 @@ dotenv.config({ path: "./config.env" });
 
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL],
+    origin: [process.env.FRONTEND_URL || 'http://localhost:5173'],
     methods: ["POST","GET","PUT","DELETE"],
     credentials: true,
   })
@@ -27,8 +27,10 @@ app.use("/api/v1/event", eventRegistrationRoutes);
 app.use("/api/v1", checkoutRouter);
 app.use("/api/v1/volunteer/login",RegisteredVolunteerRoutes);
 app.use("/api/v1/event/:eventId/register",eventRegistrationRoutes);
+app.use("/api/v1/volunteer/:id",RegisteredVolunteerRoutes)
 app.use("/api/v1/volunteer/:id/events",RegisteredVolunteerRoutes)
-app.use("/api/v1/events",eventRegistrationRoutes);
+app.use("/api/v1/volunteer/:id/change-password",RegisteredVolunteerRoutes);
+app.use('/api/v1/donations/total', checkoutRouter);
 
 dbConnection();
 

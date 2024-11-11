@@ -31,8 +31,6 @@ const Navbar = () => {
                 <div className="dropdown-content">
                 <Link to="/AdminLogin">ADMIN</Link>
                 <Link to="/VolunteerLogin">VOLUNTEER</Link>
-                {/* <Link to="/VolunteerRegistration">VOLUNTEER REGISTRATION</Link>
-                <Link to="/EventRegistration">EVENT REGISTRATION</Link> */}
           </div>
         </li>
             </ul>
